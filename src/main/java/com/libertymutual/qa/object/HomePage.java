@@ -22,12 +22,10 @@ public class HomePage {
 
 	}
 	
-	@FindBy(className = "jsx-155250305 jsx-391436929 lm-Logo--horizontal")
+	@FindBy(xpath = "//div[@class='jsx-155250305 jsx-391436929 lm-Logo--horizontal']")
 	WebElement logoElement;
-	
-	@FindBy(xpath = "//input[@aria-label='Get Auto Insurance']")
-	WebElement autoElement;
-	
+
+
 	@FindBy(xpath = "//input[@id='quote-zipCode-input']")
 	WebElement zipElement;
 	
@@ -38,21 +36,17 @@ public class HomePage {
 	commons.isDisplayed(logoElement);
 	}
 	
-	private void clickAuto() {
-		commons.click(autoElement);
-	}
-	
+
 	private void inputZip(String zip) {
-		commons.inputValues(autoElement, zip);
+		commons.inputValues(zipElement, zip);
 	}
 	
 	private void clickGetPrice() {
-		commons.click(autoElement);
+		commons.click(getPricElement);
 	}
 	
 	public void  homepageSteps1(String zip) {
 		verifyLogo();
-		clickAuto();
 		inputZip(zip);
 		clickGetPrice();
 		
