@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.libertymutual.qa.base.BaseClass;
 
-public class HomeTest extends BaseClass {
+public class AutoQouteTest extends BaseClass {
 	
 
 	@Test(enabled = true)

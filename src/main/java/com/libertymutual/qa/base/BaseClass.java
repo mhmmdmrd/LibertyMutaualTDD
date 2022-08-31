@@ -15,6 +15,7 @@ import org.testng.annotations.Parameters;
 
 import com.libertymutual.qa.commons.CommonFunctions;
 import com.libertymutual.qa.commons.CommonWaits;
+import com.libertymutual.qa.object.BasicsAutoPage;
 import com.libertymutual.qa.object.HomePage;
 import com.libertymutual.qa.utils.Configuration;
 
@@ -31,6 +32,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		protected CommonFunctions commons;
 		CommonWaits waits;
 		protected HomePage homePage;
+		protected BasicsAutoPage basicsAutoPage;
 	
 	
 		
@@ -70,6 +72,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 			waits = new CommonWaits(wait);
 			commons = new CommonFunctions(driver, waits);
 			homePage = new HomePage(driver, commons);
+			basicsAutoPage = new BasicsAutoPage(driver, commons);
 			
 		}
 		
