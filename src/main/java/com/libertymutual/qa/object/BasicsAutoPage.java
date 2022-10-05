@@ -20,7 +20,7 @@ public class BasicsAutoPage {
 		this.driver = driver;
 
 	}
-
+ 
 	@FindBy(linkText = "Hi there! Let’s start with some basics")
 	WebElement headerElement;
 
@@ -68,6 +68,9 @@ public class BasicsAutoPage {
 
 	@FindBy(id = "bodyStyle-vehicle-0_selectNode")
 	WebElement carBodyElement;
+	
+	@FindBy(xpath = "//h1[text()='More about your vehicle']")
+	WebElement pageTitlElement;
 
 	private void getHeaderText(String expectedHeaderText) {
 		assertEquals(commons.getText(headerElement), expectedHeaderText);
@@ -138,7 +141,7 @@ public class BasicsAutoPage {
 	}
 
 	private void verifyPageTitle(String expectedPageTitle) {
-		assertEquals(commons.getTitle(driver), expectedPageTitle);
+		assertEquals(commons.getText(pageTitlElement), expectedPageTitle);
 		
 	}
 

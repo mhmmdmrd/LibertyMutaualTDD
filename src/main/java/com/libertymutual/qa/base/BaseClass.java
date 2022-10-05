@@ -30,7 +30,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 		WebDriverWait wait;
 		
 		protected CommonFunctions commons;
-		CommonWaits waits;
+		protected CommonWaits waits;
 		protected HomePage homePage;
 		protected BasicsAutoPage basicsAutoPage;
 	
